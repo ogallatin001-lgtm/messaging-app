@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- no external services used; data lives in browser storage -->
+</head>
+<body>
+    <!-- authentication container -->
+    <div id="auth-container" class="centered">
+        <h2>Sign in / Register</h2>
+        <input id="email" type="email" placeholder="Email" />
+        <input id="password" type="password" placeholder="Password" />
+        <div class="actions">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+    </div>
+
+    <!-- main app container (hidden until signed in) -->
+    <div id="app" class="hidden">
+        <div id="sidebar">
+            <select id="action-select">
+                <option value="">Menu</option>
+                <option value="create-room">Create room</option>
+                <option value="join-room">Join room</option>
+                <option value="add-user">Add user</option>
+            </select>
+
+            <div id="rooms-list">
+                <h3>Rooms</h3>
+                <ul id="rooms"></ul>
+            </div>
+            <div id="friends-list">
+                <h3>Friends</h3>
+                <ul id="friends"></ul>
+            </div>
+            <button id="logout-btn">Logout</button>
+        </div>
+        <div id="chat">
+            <div id="messages"></div>
+            <div id="composer">
+                <textarea id="message-input" placeholder="Type a message"></textarea>
+                <input type="file" id="file-input" />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
