@@ -1,0 +1,9 @@
+exclude:
+  - backend
+  - "**/*.py"
+  - "**/venv"
+  - README.md
+  - .gitignore
+
+# keep empty to disable jekyll if you prefer
+# you may also create a .nojekyll file instead
